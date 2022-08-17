@@ -4,18 +4,26 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    border-bottom: 1px solid darkgray;
 }
 
 h1 {
+    margin-bottom: 0;
+    font-size: 68px;
     color: azure;
 }
 
 h2 {
+    margin-top: 0;
+    font-size: 52px;
     color: rgb(189, 15, 15);
 }
 
-#nav-bar{
+#navbar{
     position: fixed;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     background: rgb(189, 15, 15);
     width: 100%;
     height: 5%;
@@ -24,13 +32,15 @@ h2 {
 }
 
 ul {
+
     margin-right: 2%;
     float: right;
     list-style: none;
 }
 
 li {
-    
+ 
+    color: whitesmoke;
     padding-left: 20px;
     display: inline;
 }
@@ -49,7 +59,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 100%;
 }
 
 #grid-containter {
@@ -58,22 +68,25 @@ li {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 80%;
 }
 
-#grid-containter > .grid-element {
-        flex: 5%; /*grow | shrink | basis */
+#grid-containter > .project-tile {
+        flex: 1 1 5%; /*grow | shrink | basis */
         margin-left: 5%;
         margin-right: 5%;
         padding-top: 100px;
-        
+        flex-basis: 33%;
 }
 
-.grid-element {
+.project-tile {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-basis: 33%;
 }
 
 h3 {
@@ -93,6 +106,7 @@ img {
 }
 
 h5 {
+    color: whitesmoke;
     font-weight: bold;
     font-size: 42px;
 }
@@ -106,3 +120,36 @@ a {
     text-decoration: none;
     color: whitesmoke;
 }
+
+#profile-link {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid  whitesmoke;
+    text-align: center;
+    height: 30px;
+    width: 120px;
+    font-weight: bold;
+    background: gray;
+}
+
+#info {
+    border-top: 1px solid darkgray;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background: black;
+
+}
+
+h4 {
+    font-size: 42px;
+    color: whitesmoke;
+}
+
+@media (max-width: 800px) {
+    body {
+      width: 50%;
+    }
+  }
